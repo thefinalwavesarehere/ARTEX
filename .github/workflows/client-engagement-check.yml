@@ -6,6 +6,8 @@ on:
       - 'scripts/test_client_engagement.py'
       - 'scripts/client_deployment_check.py'
       - 'scripts/test_client_deployment_check.py'
+      - 'scripts/openrouter_smoke.py'
+      - 'scripts/test_openrouter_smoke.py'
       - '.github/workflows/client-engagement-check.yml'
   pull_request:
     paths:
@@ -13,6 +15,8 @@ on:
       - 'scripts/test_client_engagement.py'
       - 'scripts/client_deployment_check.py'
       - 'scripts/test_client_deployment_check.py'
+      - 'scripts/openrouter_smoke.py'
+      - 'scripts/test_openrouter_smoke.py'
       - '.github/workflows/client-engagement-check.yml'
 permissions:
   contents: read
@@ -26,4 +30,6 @@ jobs:
           python-version: '3.12'
       - run: python3 scripts/test_client_engagement.py -v
       - run: python3 scripts/test_client_deployment_check.py -v
-      - run: python3 -m py_compile scripts/client_engagement.py scripts/client_deployment_check.py
+      - run: python3 scripts/test_openrouter_smoke.py -v
+      - run: python3 scripts/openrouter_smoke.py
+      - run: python3 -m py_compile scripts/client_engagement.py scripts/client_deployment_check.py scripts/openrouter_smoke.py
