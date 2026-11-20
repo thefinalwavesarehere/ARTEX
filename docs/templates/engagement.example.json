@@ -1,0 +1,12 @@
+{
+  "engagement_id": "DEMO-2026-001",
+  "client_name": "Example Application Owner",
+  "authorizing_party": "Example Application Owner",
+  "authorization_file": "authorization-signed.pdf",
+  "authorized_from": "2026-11-20T00:00:00Z",
+  "authorized_until": "2026-12-01T00:00:00Z",
+  "scope_hosts": ["app.example.com", "api.example.com"],
+  "excluded_hosts": ["billing.example.com"],
+  "operator_attests_authority": true,
+  "environment": "staging"
+}
