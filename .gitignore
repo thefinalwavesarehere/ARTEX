@@ -66,3 +66,10 @@ posture-runs/
 
 # benchmark runner output (one dir per run)
 benchmark-results/
+
+# Client authorization and report materials (never commit real engagement data)
+/client-engagements/
+/private-engagements/
+**/authorization-signed.pdf
+**/preflight-audit.json
+**/task-draft.json
